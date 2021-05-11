@@ -1,0 +1,372 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.content-wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.header-nav{
+    position:absolute;
+    top:40px;
+    left: 0;
+    width: 100%;
+    height: 64px;
+}
+
+.position-change {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.color-change {
+    color: #2b2b2b;
+    background: #fff;
+    border-bottom: 1px solid #a0a0a0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.color-change.hamburger_line,
+.color-change.hamburger_line::after,
+.color-change.hamburger_line::before{
+    box-shadow: none;
+    border: none;
+    background-color: #2b2b2b;
+}
+
+.header-nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.header-nav-logo {
+    width: fit-content;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.hamburger-menu{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    background: transparent;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.hamburger_line,.hamburger_line::before,.hamburger_line::after{
+    position: absolute;
+    left: 0;
+    display: block;
+    width:32px;
+    height: 1px;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.hamburger_line::before,.hamburger_line::after{
+    content: "";
+}
+
+.hamburger_line{
+    top: 50%;
+}
+.hamburger_line::before{
+    top: calc(50% - 12px);
+}
+.hamburger_line::after{
+    top: calc(50% + 10px);
+}
+
+.hamburger-menu.active .hamburger_line{
+    background-color: transparent;
+}
+.hamburger-menu.active .hamburger_line::before{
+    transform: translateY(9px) rotate(-45deg);
+}
+.hamburger-menu.active .hamburger_line::after{
+    transform: translateY(-13px) rotate(45deg);
+}
+
+.header-menu {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .9);
+    transition: all .3s;
+}
+
+.height-change {
+    height: calc(100vh - 64px);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu-item {
+    padding: 0;
+    line-height: 11vh;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px solid #ccc;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.header-title-sub{
+    font-size: 4px;
+}
+
+.header-title{
+    color: white;
+    padding-top: 240px;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.header-title-sub{
+    position: relative;
+    display: block;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}
+.header-title-sub::before,
+.header-title-sub::after{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin: 0 8px;
+    background: #fff;
+    vertical-align: middle;
+}
+.content-wrapper .page-title h2::before{
+    margin-right: 8px;
+}
+.content-wrapper .page-title h2::after{
+    margin-left: 8px;
+}
+
+.concept{
+    text-align: center;
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(#fff 70%, #ededed 30%);
+}
+
+.section-title{
+    height:51px;
+    font-weight: bold;
+    color: #333333;
+    font-size: 36px;
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 0ch;
+}
+.content-wrapper>p{
+    text-align: center;
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: #333333;
+}
+
+.content-wrapper  p{
+    line-height: 2em;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.concept-img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.work{
+    width: 100%;
+    padding: 80px 0;
+}
+
+.work_contents{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 1680px;
+}
+
+.work_contents h2{
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.work_contents p {
+    margin-bottom: 0;
+}
+
+.work_content{
+    width: 420px;
+    margin-bottom: 80px;
+    text-align: left;
+    line-height: 1.8px;
+}
+.work_content:nth-of-type(1) {order: 1;}
+.work_content:nth-of-type(2) {
+  order: 3;
+  margin-top: 120px;
+}
+.work_content:nth-of-type(3) {order: 2;}
+.work_content:nth-of-type(4) {order: 4;}
+
+.florist{
+    text-align: center;
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(#ededed 50% , #ffffff 40%);
+}
+
+.flex-contents{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-item{
+    width: 300px;
+}
+
+.flex-item h2{
+    text-align: left;
+    margin-top: 12px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shop-information{
+    width: 100%;
+    padding: 80px 0 120px 0;
+}
+
+.shopInformation-contents{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopInformation-image{
+    width: 50%;
+}
+.shopInformation-table{
+    width:45%;
+    border-spacing: 16px;
+}
+tbody{
+    vertical-align: inherit;
+}
+
+.shopInformation-table-heading{
+    width: 25%;
+    border-right: 0.5px solid #a0a0a0;
+    text-align: left;
+}
+
+th,td{
+    font-weight: normal;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
+
+.contact_us{
+    background-image: url(./img/contact_us.jpg);
+    background-blend-mode:overlay;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding-top: 80px;
+    
+}
+
+.contact_us button{
+    width: 360px;
+    height: 80px;
+    text-align: center;
+}
+
+.btn-content{
+    display: block;
+    line-height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    width: 360px;
+    height:80px;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.btn-content::before{
+    content:"\f0e0";
+    font-weight: 400;
+    font-family: "Font Awesome 5 Free";
+    font-size: 30px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+footer{
+    text-align: center;
+    font-size: 16px;
+    margin: 12px;
+}
+
+@import url("/asett/responsive.css");
