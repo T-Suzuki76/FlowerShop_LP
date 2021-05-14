@@ -6,7 +6,7 @@ $(function(){
     if ($(window).width() > spBreakPoint) {
       headerHeight = 600;
     } else {
-      headerHeight = 420;
+      headerHeight = 380;
     }
 
     $(window).on('scroll', function () {
